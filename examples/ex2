@@ -1,0 +1,7 @@
+open "http://foo.index/"
+find ".videos-list"
+first title "Episode ${ep.2}"
+attr "href"
+open
+find "#video"
+attr "src"

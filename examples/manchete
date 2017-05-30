@@ -1,0 +1,4 @@
+open "http://www.globo.com"
+find ".hui-premium__title"
+inner-html
+
