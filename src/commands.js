@@ -8,11 +8,9 @@ function removeQuotes(string) {
 
 function open(args, context) {
   if (args[0]) {
-    console.log('Crawling ', removeQuotes(args[0]))
     return rp(removeQuotes(args[0]));
   }
   else {
-    console.log('Crawling ', context)
     return rp(context);
   }
 }
