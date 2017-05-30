@@ -8,9 +8,11 @@ function removeQuotes(string) {
 
 function open(args, context) {
   if (args[0]) {
+    console.log('Crawling ', removeQuotes(args[0]))
     return rp(removeQuotes(args[0]));
   }
   else {
+    console.log('Crawling ', context)
     return rp(context);
   }
 }
@@ -35,7 +37,7 @@ function attr(args, context) {
 
 function filter(args, context) {
   const attrib = args[0];
-  const part = removeQuotes(args[1]);
+  const part = removeQuotes(args.slice(1).join(' '));
   const filtered = context.filter(function() {
     return this.attribs[attrib].includes(part);
   });
