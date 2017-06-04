@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const interpolate = require('./interpolate');
 
 function removeQuotes(string) {
-  return string.substr(1, string.length - 2).split('\\"').join('"');
+  return string.replace(/^\s*"/, '').replace(/\s*"$/, '')
 }
 
 function open(args, context) {
