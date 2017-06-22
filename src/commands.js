@@ -15,6 +15,10 @@ function open(args, context) {
   }
 }
 
+function follow(args, context) {
+  return rp(removeQuotes(args.join(' ')) + context);
+}
+
 function find(args, context) {
   const selector = removeQuotes(args.join(' '));
   const $ = cheerio.load(context);
@@ -63,6 +67,8 @@ function run(command, rawArgs, context, variables) {
   switch(command) {
     case 'open':
       return open(args, context);
+    case 'follow':
+      return follow(args, context);
     case 'find':
       return find(args, context);
     case 'attr':
