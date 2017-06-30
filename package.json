@@ -1,6 +1,6 @@
 {
   "name": "ccrawler",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "configurable web crawler library and cli tool",
   "main": "src/index.js",
   "scripts": {

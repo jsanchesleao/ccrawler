@@ -94,7 +94,9 @@ function exec(script, variables) {
       return Promise.reject({cause: 'all alternatives failed'});
     }
 
-    console.log('Running alternative [', alt, ']');
+    if (!variables.silent) {
+      console.log('Crawling [', alt, ']');
+    }
 
     const otherAlts = selectedAlts.slice(1);
     const lines = alts[alt];
