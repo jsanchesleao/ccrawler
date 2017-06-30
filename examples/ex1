@@ -1,4 +1,3 @@
 open "https://foo.bar/page/${num.3}"
 find ".video-js"
 attr "src"
-

@@ -1,0 +1,13 @@
+::ALT1
+open "http://foo.index/"
+find ".videos-list"
+first title "Episode ${ep.2}"
+attr "href"
+open
+find "#video"
+attr "src"
+
+::ALT2
+open "https://foo.bar/page/${ep.3}"
+find ".video-js"
+attr "src"
